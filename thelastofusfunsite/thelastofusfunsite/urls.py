@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from maincharacters.views import index
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls), #обращение к админке сайта
+    path('maincharacters/', index), #обращение к странице http://127.0.0.1:8000/maincharacters/. Пишем функцию, которая будет активизироваться на запрос maincharacters/
 ]
